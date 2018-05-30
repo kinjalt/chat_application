@@ -1,0 +1,16 @@
+<div class="card mb-2">
+  <div class="card-block">
+    <div class="row">
+      <div class="col-md-1">
+        <%= letter_avatar_tag(message.user.name, Time.now.to_i, style: "max-width: 60px;") %>
+        <%#= gravatar_for message.user %>
+      </div>
+      <div class="col-md-11">
+        <p class="card-text">
+          <span class="text-muted"><%= message.user.name %> at <%= message.user.timestamp %> says</span><br>
+          <%= message.body %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
